@@ -2,95 +2,129 @@
 
 Noticing that a conjecture can be proved using previous work you've done can save you a lot of time! Aside from that, it can often show you the way that future conjectures can be proved.
 
-\vspace{8mm}
-
-\begin{exampleT}
 Let's assume we have already proved the conjecture:
-\end{exampleT}
-\begin{center}
-    \textbf{11.1}: \hl{Every prime number, except 2 and 3, is either one more or one less than a multiple of 6.}
-\end{center}
 
-Knowing this is \textsc{true}, we can use it in the proof of the conjecture:
+(\#cnj:collect): Every prime number, except 2 and 3, is either one more or one less than a multiple of 6.
 
-\begin{center}
-    \textbf{11.2}: \hl{Doubling \textbf{every} prime number (except 2) then adding two creates a number divisible by four.}
-\end{center}
+Knowing this is true, we can use it in the proof of the conjecture:
 
-\textbf{Proof:} As conjecture \textbf{11.1} is known to be \textsc{true}, we know that every prime $p$, $p \neq 2, 3$, can be written in the form
-\begin{align*}
+(\#cnj:cusp): Doubling **every** prime number (except 2) then adding two creates a number divisible by four.
+
+```{proof} 
+As conjecture \@ref(cnj:collect) is known to be true, we know that every prime $p$, $p \neq 2, 3$, can be written in the form
+
+\begin{align}
     p &= 6k + 1
-\intertext{or}
+\end{align}
+
+or
+
+\begin{align}
     p &= 6k - 1
-\intertext{with $k \in \mathbb Z$.}
-\intertext{Let's deal with these one-by-one.}
-\intertext{If}
+\end{align}
+
+with $k \in \mathbb Z$.
+
+Let's deal with these one-by-one.
+
+If
+
+\begin{align}
     p &= 6k + 1
-\intertext{then doubling it and adding two gives}
+\end{align}
+
+then doubling it and adding two gives
+
+\begin{align}
     2p + 2  &= 2(6k + 1) + 2 \\
     &= 12p + 2 + 2 \\
     &= 12p + 4 \\
     &= 4(3p + 1)
-\intertext{which is a multiple of 4.}
-\intertext{Similarly, if}
+\end{align}
+
+which is a multiple of 4.
+
+Similarly, if
+
+\begin{align}
     p &= 6k - 1
-\intertext{then doubling it and adding two gives}
+\end{align}
+
+then doubling it and adding two gives
+
+\begin{align}
     2p + 2  &= 2(6k - 1) + 2 \\
     &= 12p - 2 + 2 \\
     &= 12p \\
     &= 4(3p)
-\intertext{which is a multiple of 4.}
-\intertext{As noted in the first line of the proof, this proof covers all primes \textit{except} 2 and 3. However, conjecture \textbf{11.2} covers all primes except 2, so we should also check that the conjecture holds for 3. \newline \newline If $p=3$, then $2p+2 = 2 \cdot 3 + 2 = 6 + 2 = 8$, which is a multiple of 4. \newline \newline Therefore the conjecture is \textsc{true}. \hspace{8cm} $\square$}
-\end{align*}
+\end{align}
 
-\vspace{-5mm}
+which is a multiple of 4.
 
-\begin{Exercise}
-The following conjectures \emph{might} need you to use earlier work, or might not.
-    \begin{enumerate}[label=\textbf{11.\arabic*}:]
-    \setcounter{enumi}{0}
-        \item \hl{Every prime number, except 2 and 3, is either one more or one less than a multiple of 6.} (This is the conjecture on the previous page!) 
-        \textit{Hint: You might want to try writing the positive whole numbers greater than 3 in a rectangular grid, in such a way that all the primes are in only one or two columns.}
-        \item \hl{Doubling \textbf{every} prime number (except 2) then adding two creates a number divisible by four.} (We proved this on the previous page!)
-        \item \hl{Squares of odd numbers are all one more than a multiple of 8.}
-        \item \hl{The only numbers which can be classed as ``odd'' or ``even'' are integers (whole numbers).}
-        \item \hl{$a^2 - a + 41$ is always prime for all positive integers $a$.}
-        \item \hl{$a^2 - a + 41$ is always prime for all \textbf{nonpositive} integers $a$.}
-        \item \hl{The \textbf{interior angles} of the octagon formed by joining the midpoint of each side of a square with each corner of the square are not all equal.} \textit{Hint: Draw the picture first!}
-        \item \hl{$1^2$, $11^2$, $111^2$, $1111^2$, ... are all palindromic numbers.} \\
-        A palindromic number is one that reads the same backwards as it does forwards, e.g. 987789 and 62926. \\
-        \lbrack Similarly, a word is palindromic if it reads the same backwards as it does forwards, e.g. \textit{racecar} and \textit{noon}. Sentences can be palindromic too, usually by ignoring spaces and punctuation, e.g. ``\textit{No lemon, no melon}'' or ``\textit{Was it a cat I saw?}''.\rbrack 
-    \end{enumerate}
-\end{Exercise}
+As noted in the first line of the proof, this proof covers all primes *except* $2$ and $3$. However, conjecture  \@ref(cnj:cusp) covers all primes except $2$, so we should also check that the conjecture holds for $3$. 
 
-\begin{Exercise}
-Something slightly different today: 
-\end{Exercise}
+If $p=3$, then $2p+2 = 2 \cdot 3 + 2 = 6 + 2 = 8$, which is a multiple of $4$. 
 
-This chapter was all about using previously proved (or disproved) conjectures to aid your work on new proofs. Today, I want you to look back over \textit{all} the previous conjectures we've proved and disproved and use your findings to write some new conjectures. 
+Therefore the conjecture is true.
+
+```
+
+<div class="alert alert-info" role="alert">
+```{exercise}
+The following conjectures *might* need you to use earlier work, or might not.
+  
+Every prime number, except $2$ and $3$, is either one more or one less than a multiple of $6$. (This is the conjecture on the previous page!) 
+Hint: You might want to try writing the positive whole numbers greater than $3$ in a rectangular grid, in such a way that all the primes are in only one or two columns.
+
+Doubling **every** prime number (except $2$) then adding two creates a number divisible by four. (We proved this on the previous page!)
+
+Squares of odd numbers are all one more than a multiple of $8$.
+
+The only numbers which can be classed as "odd" or "even" are integers (whole numbers).
+
+$a^2 - a + 41$ is always prime for all positive integers $a$.
+
+$a^2 - a + 41$ is always prime for all **nonpositive} integers $a$.
+
+The **interior angles** of the octagon formed by joining the midpoint of each side of a square with each corner of the square are not all equal. *Hint: Draw the picture first!*
+
+$1^2$, $11^2$, $111^2$, $1111^2$, ... are all palindromic numbers.
+
+A palindromic number is one that reads the same backwards as it does forwards, e.g. $987789$ and $62926$.
+Similarly, a word is palindromic if it reads the same backwards as it does forwards, e.g. *racecar* and *noon*. Sentences can be palindromic too, usually by ignoring spaces and punctuation, e.g. "*No lemon, no melon*" or "*Was it a cat I saw?*".   
+
+``` 
+</div>
+
+<div class="alert alert-info" role="alert">
+```{exercise}
+Something slightly different today:
+  
+This chapter was all about using previously proved (or disproved) conjectures to aid your work on new proofs. Today, I want you to look back over *all* the previous conjectures we've proved and disproved and use your findings to write some new conjectures.
 
 Here are the rules:
 
-\begin{itemize}
-    \item Each student should write at least two conjectures. \\
+Each student should write at least two conjectures. 
     
-    \item The conjectures should be \textsc{true}.\\
+- The conjectures should be true.
     
-    \item The conjectures should be provable using work which you and your classmates have previously done, and using the methods we've already met: direct proof and exhaustion.\\
+- The conjectures should be provable using work which you and your classmates have previously done, and using the methods we've already met: direct proof and exhaustion.
     
-    \item DON'T rush - take your time to write these conjectures.\\
+- DON'T rush - take your time to write these conjectures.
     
-    \item Post your conjectures onto the 11.2 padlet.\\
-    \textbf{Note:} Post each conjecture whenever it's ready to go!\\
+- Post your conjectures onto the XXXXXXXXXXXXXXXXXXXx padlet.
+**Note:** Post each conjecture whenever it's ready to go!
     
-    \item If you still have time remaining in class OR as homework, try to solve some of your classmates' conjectures. Post your proof \textbf{underneath} their post.\\
-    \textbf{Note:} DON'T solve too many conjectures - leave some for other people to solve!!\\
+- If you still have time remaining in class OR as homework, try to solve some of your classmates' conjectures. Post your proof **underneath** their post.
+**Note:** DON'T solve too many conjectures - leave some for other people to solve!!
     
-    \item If there are no unsolved conjectures left on the padlet, try solving one of the conjectures already solved. Maybe you can solve it in a different way??\\
+- If there are no unsolved conjectures left on the padlet, try solving one of the conjectures already solved. Maybe you can solve it in a different way??
     
-    \item If you think your classmate has written a conjecture which is actually \textsc{false}, tell them by posting a disproof (or counterexample) under their post.\\
+- If you think your classmate has written a conjecture which is actually false, tell them by posting a disproof (or counterexample) under their post.
     
-    \item If \textit{your} conjecture is disproved by a classmate, can you modify it to make it \textsc{true}?
-\end{itemize}
-\vspace{5mm}
+- If *your* conjecture is disproved by a classmate, can you modify it to make it true?
+
 Good luck!
+
+``` 
+</div>

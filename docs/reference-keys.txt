@@ -115,6 +115,10 @@ cnj:wreck
 cnj:worm
 cnj:wend
 fig:unnamed-chunk-94
+cnj:collect
+cnj:cusp
+exr:unnamed-chunk-96
+exr:unnamed-chunk-97
 getting-started
 about-this-course
 about-this-book
